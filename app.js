@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
-const port = 2024;
 require('dotenv').config();
 const mongoose = require('mongoose');
 
 app.use(express.json());
+const port=process.env.PORT;
 
 const adminsRoutes = require('./src/Routes/admin/index.routes')
 app.use('/api/admin', adminsRoutes);
